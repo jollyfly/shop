@@ -4,12 +4,12 @@
       <index-header></index-header>
     </el-header>
     <el-container>
-      <el-aside width="250px" height="100%">
+      <el-aside width="200px" height="100%">
         <index-menu></index-menu>
       </el-aside>
       <el-container>
         <el-header>Header</el-header>
-        <el-main>
+        <el-main style="background: #f1f2f7">
           <router-view></router-view>
         </el-main>
         <el-footer>Footer</el-footer>
@@ -19,20 +19,17 @@
 </template>
 
 <script>
-  import IndexMenu from './components/IndexMenu'
-  import ElContainer from "element-ui/packages/container/src/main";
-  import IndexHeader from "./components/IndexHeader";
-  import ItemList from "./components/item/ItemList";
+  import ElContainer from "element-ui/packages/container/src/main"
+  import IndexHeader from "./components/IndexHeader"
+  import IndexMenu from "./components/IndexMenu"
 
 
   export default {
     name: 'app',
     components: {
-      ItemList,
       IndexHeader,
       ElContainer,
-      IndexMenu,
-
+      IndexMenu
     }
   }
 </script>
