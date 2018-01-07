@@ -75,6 +75,15 @@
         <el-form-item label="卖点" :label-width="formLabelWidth">
           <el-input v-model="item.sellPoint" auto-complete="off"/>
         </el-form-item>
+        <el-upload
+          class="upload-demo"
+          drag
+          action="https://jsonplaceholder.typicode.com/posts/"
+          multiple>
+          <i class="el-icon-upload"></i>
+          <div class="el-upload__text">将文件拖到此处，或<em>点击上传</em></div>
+          <div class="el-upload__tip" slot="tip">只能上传jpg/png文件，且不超过500kb</div>
+        </el-upload>
       </el-form>
       <div slot="footer" class="dialog-footer">
         <el-button @click="dialogFormVisible = false">取 消</el-button>
@@ -110,7 +119,8 @@
           resource: '',
           desc: ''
         },
-        formLabelWidth: '120px'
+        formLabelWidth: '120px',
+        item:{}
       }
     },
     mounted: function () {
